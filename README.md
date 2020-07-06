@@ -20,7 +20,7 @@ yarn global add serverless
 ```
 Or via npm
 ```
-nom i -g serverless
+npm i -g serverless
 ```
 
 ## Running the tests
