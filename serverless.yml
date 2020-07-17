@@ -34,6 +34,25 @@ functions:
       - http:
           method: get
           path: debug1
+  graphql:
+    handler: src/handler.graphql
+    events:
+     - http:
+        method: POST
+        path: /
+        cors:
+          origins:
+            - '*'
+          headers:
+            - Content-Type
+            - Access-Control-Allow-Origin
+            - Origin
+            - x-api-key
+          allowCredentials: true
+     - http:
+        method: GET
+        path: playground
+        cors: true
   # hello:
   #   handler: src/handler.hello
   #   events:

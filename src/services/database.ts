@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 import { warn } from 'console';
-import userSchema from './user.model';
+import userSchema from '../models/user.model';
 
 interface MongoConnection {
-  user: string;
-  pass: string;
+  user?: string;
+  pass?: string;
   name: string;
   port: number;
   host: string;
@@ -35,10 +35,10 @@ class Database {
       useFindAndModify: false,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      auth: {
-        user: this.connection.user,
-        password: this.connection.pass,
-      },
+      // auth: {
+      //   user: this.connection.user,
+      //   password: this.connection.pass,
+      // },
       dbName: this.connection.name,
     });
     (await connection).model('users', userSchema);

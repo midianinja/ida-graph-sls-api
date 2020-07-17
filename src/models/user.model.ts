@@ -10,6 +10,7 @@ const userSchema = new Schema(
   {
     ida_id: { type: String, unique: true, sparse: true },
     name: { type: String, required: true },
+    last_name: { type: String, required: true },
     profile_image: {
       mimified: { type: String, default: '' },
       original: { type: String, default: '' },
