@@ -4,19 +4,34 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sls offline start"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/mongoose": "^5.7.31",
+    "aws-lambda": "^1.0.6",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.23",
     "openid-client": "^3.15.6",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.17",
+    "@types/aws-lambda": "^8.10.59",
     "@types/node": "^10.12.18",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-module-resolver": "^0.17.0",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "serverless-offline": "^6.4.0",
     "serverless-webpack": "^5.2.0",
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.4",
+    "typescript-eslint": "^0.0.1-alpha.0",
     "webpack": "^4.29.0",
     "webpack-node-externals": "^1.7.2"
   },
